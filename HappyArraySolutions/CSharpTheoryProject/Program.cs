@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.Write("Write your string: ");
+            string myString = Console.ReadLine();
+            Console.WriteLine("Your string is a palindrome: " + Methods.IsStringPalindrome(myString));
         }
     }
 }

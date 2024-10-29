@@ -8,6 +8,19 @@ namespace CSharpTheoryProject
 {
     internal class Methods
     {
-        
+        public static bool IsStringPalindrome(string str)
+        {
+            bool result = true;
+
+            for (int i = 0, j = str.Length - 1; i < str.Length / 2 & j >= str.Length / 2; i++, j--)
+            {
+                if (str[i] != str[j])
+                {
+                    result = false; 
+                    break;
+                }
+            }
+            return result;
+        }
     }
 }
