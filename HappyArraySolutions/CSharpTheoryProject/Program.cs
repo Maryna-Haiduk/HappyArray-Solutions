@@ -9,7 +9,7 @@ namespace CSharpTheoryProject
         {
             Console.Write("Write your string: ");
             string isPalindoreCheck = Console.ReadLine();
-            Console.WriteLine("Your string is a palindrome: " + Methods.IsStringPalindrome(myString));
+            Console.WriteLine("Your string is a palindrome: " + Methods.IsStringPalindrome(isPalindoreCheck));
           
             Console.WriteLine("Create your string to count the number of words in it that have more than 4 letters: ");
             string moreThanFourLettersCheck = Console.ReadLine();
