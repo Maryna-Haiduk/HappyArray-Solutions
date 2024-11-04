@@ -13,7 +13,7 @@ namespace CSharpTheoryProject
           
             Console.WriteLine("Create your string to count the number of words in it that have more than 4 letters: ");
             string moreThanFourLettersCheck = Console.ReadLine();
-            Console.WriteLine("Number of words with more then 4 letters: " + Methods.CountWordsWithMoreThanFourLetters(moreThanFourLetters));
+            Console.WriteLine("Number of words with more then 4 letters: " + Methods.CountWordsWithMoreThanFourLetters(moreThanFourLettersCheck));
         }
     }
 }
