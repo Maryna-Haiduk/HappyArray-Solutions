@@ -7,13 +7,17 @@ namespace CSharpTheoryProject
     {
         static void Main(string[] args)
         {
-            Console.Write("Write your string: ");
-            string isPalindoreCheck = Console.ReadLine();
-            Console.WriteLine("Your string is a palindrome: " + Methods.IsStringPalindrome(isPalindoreCheck));
-          
-            Console.WriteLine("Create your string to count the number of words in it that have more than 4 letters: ");
-            string moreThanFourLettersCheck = Console.ReadLine();
-            Console.WriteLine("Number of words with more then 4 letters: " + Methods.CountWordsWithMoreThanFourLetters(moreThanFourLettersCheck));
+            TextHelper myTextHelper = new TextHelper("Hello, Friend!");
+            bool result1 = myTextHelper.IsStringPalindrome();
+            Console.WriteLine($"Is string palindrome: {result1}");
+            
+            Console.WriteLine("Result of counting vowels: ");
+            myTextHelper.CountVowels();
+
+            Console.WriteLine($"How many words has more than four letters: {myTextHelper.CountWordsWithMoreThanFourLetters()}");
+
+            Console.WriteLine(myTextHelper.ReverseWords());
+            Console.WriteLine($"Remove Duplicate Letters: {myTextHelper.RemoveDuplicateLetters()}");
         }
     }
 }
