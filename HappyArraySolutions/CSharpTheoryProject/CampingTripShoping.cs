@@ -8,8 +8,15 @@ namespace CSharpTheoryProject
 {
     internal class CampingTripShoping
     {
-        public static int SaveShopingTime(Dictionary<string, string> products, List<string> shopingList)
+        public static int GetSavedSteps(string[][] products, string[] shopingList)
         {
+            Dictionary<string, string> productsDic = new Dictionary<string, string>();
+
+            for (int i = 0; i < products.Length; i++)
+            {
+                productsDic.Add(products[i][0], products[i][1]);
+            }
+
             int savedTime = 0;
 
             List<string> departmentsPath = new List<string>();
@@ -18,7 +25,7 @@ namespace CSharpTheoryProject
 
             foreach (string shopingItem in shopingList)
             {
-                foreach (var product in products)
+                foreach (var product in productsDic)
                 {
                     if (shopingItem == product.Key && dep != product.Value)
                     {
