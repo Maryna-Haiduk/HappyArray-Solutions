@@ -36,6 +36,21 @@ namespace CSharpTheoryProject
             return savedTime;
         }
 
+        public static Dictionary<string, string> CreateProductDictionary(List<List<string>> products)
+        {
+            Dictionary<string, string> productsDic = new Dictionary<string, string>();
+
+            foreach (var product in products) 
+            {
+                if (!productsDic.ContainsKey(product[0]))
+                {
+                    productsDic.Add(product[0], product[1]);
+                }
+            }
+
+            return productsDic;
+        }
+
         //public static int ShopingTimeDiff(List<string[]> products, List<string> shopingList)
         //{
         //    int savedTime = 0;
