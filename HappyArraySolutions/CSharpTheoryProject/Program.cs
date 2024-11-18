@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using System.Threading.Tasks;
+using CSharpTheoryProject.OOP;
 
 namespace CSharpTheoryProject
 {
@@ -7,6 +8,24 @@ namespace CSharpTheoryProject
     {
         static void Main(string[] args)
         {
+
+            Person personObject = new Person("Roman", 1);
+
+            personObject.Greet();
+            personObject.ShowAge();
+
+            Student studentObject = new Student("Maryna", 31, "Programming classes");
+            studentObject.Greet();
+            studentObject.ShowAge();
+            studentObject.ShowStudentInfo();
+            studentObject.GoToClasses();
+
+            Teacher teacherObject = new Teacher("Masha", 35, "C#");
+            teacherObject.Greet();
+            teacherObject.ShowAge();
+            teacherObject.ShowTeacherInfo();
+            teacherObject.Explain();
+
             Dictionary<string, string> productsDic = new Dictionary<string, string>()
             {
                 { "Cheese", "Dairy" },
@@ -59,8 +78,6 @@ namespace CSharpTheoryProject
             {
                 "Cheese", "Potatoes", "Blueberries", "Canned Tuna"
             };
-
-            Console.WriteLine(CampingTripShoping.SaveShopingTime(productsDic, shopingList5));
 
             //Console.Write("Write your string: ");
             //string isPalindoreCheck = Console.ReadLine();
