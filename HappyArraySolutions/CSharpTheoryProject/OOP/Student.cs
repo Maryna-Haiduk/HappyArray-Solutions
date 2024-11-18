@@ -8,9 +8,27 @@ namespace CSharpTheoryProject.OOP
 {
     internal class Student : Person
     {
-        public Student(string name, int age) : base(name, age) 
+        public string Classes { get; set; }
+        public Student(string name, int age, string classes) : base(name, age) 
         {
+            Classes = classes;
+        }
 
+        public override void Greet()
+        {
+            Console.WriteLine($"Hello my name is {Name}, and I'm a student");
+        }
+        
+        public void GoToClasses()
+        {
+            Console.WriteLine($"I’m going to {Classes}");
+        }
+
+        public void ShowStudentInfo()
+        {
+            Greet();
+            ShowAge();
+            GoToClasses();
         }
     }
 }

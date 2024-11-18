@@ -21,7 +21,7 @@ namespace CSharpTheoryProject.OOP
         {
             Console.WriteLine($"Hello my name is {Name}");
         }
-        public virtual void ShowAge() 
+        public void ShowAge() 
         {
             Console.WriteLine($"I am {Age} years old");
         }
